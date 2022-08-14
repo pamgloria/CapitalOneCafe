@@ -1,0 +1,166 @@
+html,
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    background-color: white;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.main {
+    height: 30rem;
+    padding-top: 1rem;
+    background-image: url('https://content.codecademy.com/courses/freelance-1/unit-5/tsunami-coffee/images/bg-photo.png');
+    background-size: cover;
+}
+
+.main img {
+    width: 15rem;
+    display: block;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+nav {
+    background-color: rgb(1, 32, 61);
+    color: White;
+    padding: 0.75rem 1.25rem;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+li {
+    display: inline-block;
+    
+}
+
+.supporting,
+.rating,
+.gallery,
+.location {
+    margin: 4em auto;
+}
+
+.supporting {
+    display: flex;
+    align-items: flex-start;
+    padding: 0 1rem;
+}
+
+.supporting img {
+    width: 10%;
+    height: 10%;
+    margin: 5%;
+}
+
+.rating {
+    background-color: rgb(1, 32, 61);
+    height: 20rem;
+    padding: 0 1rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating h1 {
+    font-size: 2.5rem;
+}
+
+.gallery img {
+    display: block;
+    width: 30%;
+    margin: 1.5%;
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.location {
+    text-align: center;
+    margin-bottom: 7rem;
+}
+
+.location img {
+    width: 100%;
+}
+
+footer {
+    background-color: rgb(1, 32, 61);
+    padding: 0 1rem;
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5em 0;
+    color: white;
+}
+
+/*Now the page looks better on large screens. When the page is resized to a smaller width, the page needs to resize and reorganize its elements using media queries.
+Write a media query that targets the screen when its width is under 960 pixels and smaller*/ 
+/*When the page is resized to a width less than 960 pixels, note that the navigation bar has empty space above it. Within the media query you wrote in the last step, set the top padding of the .main class to 0*/
+@media only screen and (max-width: 960px) {
+    .main {
+        padding-top: 0;
+    }
+}
+
+/*Resize the browser from large to small. Notice that the coffee beans image in the supporting section causes the supporting paragraph to become too thin.
+Write a media query for screens under 700 pixels*/
+/*Inside the media query, make the image disappear by ensuring that the .supporting img selector displays nothing.
+You can make an element disappear using the following property and value:
+display: none;*/
+@media only screen and (max-width: 700px) {
+    .supporting img {
+        display: none;
+    }
+}
+
+/*Continue to resize the width of the browser until the website is the size of a small screen.
+
+Write a media query that targets a screen width less than 470 pixels*/
+/*
+Inside the media query for small screens, you’’ll need to apply a variety of styles.
+
+First, make the rating’s h1 font size the equivalent of 32 pixels using rem units*/
+/*
+The images in the gallery are too small for small screens.
+
+Select the images in the gallery and style them so that they fill the width of the screen.
+
+Then set their margin to 0 so they span across the entire page*/
+/*
+The footer’s text is not formatted correctly on small screen sizes.
+
+Hide the nav inside the footer to appear better on small screens*/
+@media only screen and (max-width: 470px) {
+    .rating h1 {
+        font-size: 2rem;
+    }
+    .gallery img {
+        width: 100%;
+        margin: 0;
+    }
+    footer nav {
+        display: none;
+    }
+}
+
