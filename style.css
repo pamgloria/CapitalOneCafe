@@ -37,16 +37,25 @@ ul {
     
 }
 
-a {
-    color: #fff;
-    text-decoration: none;
-    padding-left: 20px;
-}
-
 li {
     display: inline-block;
     
 }
+
+/*link hover nav buttons start*/
+a {
+    text-decoration: none;
+    box-shadow: inset 0 0 0 0 #8f0000;
+    color: #ffffff;
+    margin: 0 -.25rem;
+    padding: 0 20px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+  a:hover {
+    box-shadow: inset 100px 0 0 0 #8f0000;
+    color: rgb(2, 50, 95);
+  }
+/*link hover nav button ends*/
 
 .supporting,
 .rating,
